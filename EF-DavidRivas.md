@@ -574,7 +574,7 @@ munani_app_v2/
 ├── .env                              # Variables de entorno (no versionado)
 ├── README.md                         # Documentación principal
 ├── CHECKLIST_PENDIENTE_PROYECTO_FINAL.md
-└── EF-DavidChoqueCalle.md           # Este documento
+└── EF-DavidRivas.md           # Este documento
 ```
 
 **Descripción de componentes clave:**
@@ -3830,12 +3830,12 @@ flutter run
 
 **Enlace de descarga:**
 ```
-https://drive.google.com/file/d/[ID]/munani_app_v2_release.apk
+https://drive.google.com/drive/folders/1HwyAO5pD-LTEqfVoWBx1fi1c1TCvynVi?usp=sharing
 ```
 
 **Información del APK:**
 - Versión: 2.0.0+1
-- Tamaño: ~25 MB
+- Tamaño: ~66 MB
 - Requisitos: Android 5.0 (API 21) o superior
 - Firmado con keystore de producción
 
@@ -3847,12 +3847,8 @@ https://drive.google.com/file/d/[ID]/munani_app_v2_release.apk
 4. Confirmar instalación
 5. Abrir app "Munani"
 
-## 4.3 Video Demostrativo
+### 4.2.1 Video Demostrativo
 
-**Enlace al video:**
-```
-https://youtu.be/[VIDEO_ID]
-```
 
 **Duración:** 9 minutos 45 segundos
 
@@ -3868,7 +3864,7 @@ https://youtu.be/[VIDEO_ID]
 - **07:00 - 08:30**: Demostración de logging de seguridad (A09)
 - **08:30 - 09:45**: Sincronización offline-first y conclusiones
 
-## 4.4 Base de Datos
+### 4.2.2 Base de Datos
 
 **Modelo relacional (Diagrama ER):**
 ```
@@ -3911,15 +3907,15 @@ WHERE table_schema = 'public'
 ORDER BY table_name, ordinal_position;
 ```
 
-## 4.5 Credenciales de Prueba
+## 4.3 Credenciales de Prueba
 
 A continuación se proporcionan credenciales de prueba para evaluar el sistema con diferentes roles:
 
 ### **Usuario Administrador**
 
 ```
-Email: admin@munani.com
-Contraseña: Admin@2025
+Email: davicho981@gmail.com
+Contraseña: Npng@06Nov25!X@5
 Rol: admin
 Acceso: Todos los módulos
 ```
@@ -3934,10 +3930,10 @@ Acceso: Todos los módulos
 ### **Usuario Store Manager**
 
 ```
-Email: manager.tienda@munani.com
-Contraseña: Manager@2025
+Email: danaerevick@gmail.com
+Contraseña: Ldvat@18Ago18!.z
 Rol: store_manager
-Ubicación asignada: Tienda Central
+Ubicación asignada: TheFriends
 Acceso: Módulos de tienda
 ```
 
@@ -3950,8 +3946,8 @@ Acceso: Módulos de tienda
 ### **Usuario Warehouse Manager**
 
 ```
-Email: manager.almacen@munani.com
-Contraseña: Manager@2025
+Email: NicoleRamirez45@gmail.com
+Contraseña: Eqpa@06Nov25!zZT
 Rol: warehouse_manager
 Ubicación asignada: Almacén Principal
 Acceso: Módulos de almacén
@@ -3966,8 +3962,8 @@ Acceso: Módulos de almacén
 ### **Usuario Cliente**
 
 ```
-Email: cliente@munani.com
-Contraseña: Cliente@2025
+Email: davidep123@gmail.com
+Contraseña: Ldvat@18Ago18!.z
 Rol: customer
 Acceso: Módulos de cliente
 ```
@@ -3981,7 +3977,7 @@ Acceso: Módulos de cliente
 **Nota de seguridad:**
 Estas credenciales son solo para propósitos de evaluación. En un entorno de producción real, se recomienda cambiar todas las contraseñas y restringir el acceso según políticas de seguridad de la organización.
 
-## 4.6 Documentación Adicional
+## 4.4 Documentación Adicional
 
 **Documentos disponibles en el repositorio:**
 
@@ -3989,7 +3985,6 @@ Estas credenciales son solo para propósitos de evaluación. En un entorno de pr
 2. **ScopeProject.md** - Alcance y especificaciones técnicas
 3. **CHECKLIST_PENDIENTE_PROYECTO_FINAL.md** - Checklist de implementación OWASP
 4. **EF-DavidRivas.md** - Guía de evidencias y capturas
-5. **EF-DavidChoqueCalle.md** - Este documento (entregable final)
 
 **Diagramas:**
 
