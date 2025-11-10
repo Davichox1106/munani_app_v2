@@ -1,0 +1,62 @@
+%% Munani App V2 - Diagrama Clean Architecture
+%% Renderiza con: npx @mermaid-js/mermaid-cli -i clean_architecture.mmd -o clean_architecture.png
+
+flowchart LR
+  classDef capaDominio fill:#ffe4c4,stroke:#a0522d,color:#3e2723,font-weight:bold
+  classDef capaDatos fill:#fce4ec,stroke:#ad1457,color:#311b92,font-weight:bold
+  classDef capaPresentacion fill:#e0f7fa,stroke:#00796b,color:#004d40,font-weight:bold
+  classDef infraestructura fill:#ede7f6,stroke:#5e35b1,color:#1a237e,font-weight:bold
+
+  subgraph "Presentación • UI + State"
+    direction TB
+    Widgets[Widgets Flutter]
+    Cubits(Cubits / BLoCs)
+    Routing[Navegación & Guards]
+  end
+  class Widgets,Cubits,Routing capaPresentacion
+
+  subgraph "Dominio"
+    direction TB
+    Entidades[Entidades]
+    ValueObjects[Value Objects]
+    CasosUso[Casos de Uso]
+    RepositoriosAbst["Repositorios (abstractos)"]
+  end
+  class Entidades,ValueObjects,CasosUso,RepositoriosAbst capaDominio
+
+  subgraph "Datos"
+    direction TB
+    DatasourcesLocal["DataSources Locales<br/>(Isar, SharedPreferences)"]
+    DatasourcesRemotos["DataSources Remotos<br/>(Supabase REST / Storage / SQL)"]
+    RepositoriosImpl[Repositorios Implementaciones]
+    Mappers[Mappers & DTOs]
+  end
+  class DatasourcesLocal,DatasourcesRemotos,RepositoriosImpl,Mappers capaDatos
+
+  subgraph "Infraestructura Complementaria"
+    direction TB
+    SyncServices[AutoSync / FullSync]
+    StorageServices["Servicios de Storage<br/>(QR/Product Images)"]
+    AuthServices[RateLimiter & Auth Helpers]
+    Sanitizer[InputSanitizer]
+  end
+  class SyncServices,StorageServices,AuthServices,Sanitizer infraestructura
+
+  Widgets -->|Eventos| Cubits -->|Invoca| CasosUso
+  Routing --> Widgets
+  CasosUso --> RepositoriosAbst
+  RepositoriosAbst --> RepositoriosImpl
+  RepositoriosImpl --> DatasourcesLocal
+  RepositoriosImpl --> DatasourcesRemotos
+  DatasourcesLocal -->|Persistencia Offline| Isar["Isar DB"]
+  DatasourcesRemotos --> Supabase["Supabase<br/>Auth · Postgres · Storage"]
+  class Isar infraestructura
+  class Supabase infraestructura
+
+  Cubits --> SyncServices
+  SyncServices --> DatasourcesLocal
+  SyncServices --> DatasourcesRemotos
+
+  CasosUso --> Sanitizer
+  Widgets --> AuthServices
+  RepositoriosImpl --> StorageServices

@@ -1,0 +1,30 @@
+%% Flujo de Autenticación y Sesión JWT (Munani App V2)
+
+sequenceDiagram
+  autonumber
+  participant User as Usuario (App móvil)
+  participant App as Munani App (Flutter)
+  participant AuthRepo as AuthRepository
+  participant SupabaseAuth as Supabase Auth
+  participant Trigger as Trigger handle_new_user
+  participant PublicUsers as Tabla public.users
+  participant AutoSync as AutoSyncService
+
+  User->>App: Ingresa email + contraseña
+  App->>AuthRepo: AuthLoginRequested
+  AuthRepo->>SupabaseAuth: signInWithPassword(email, password)
+  SupabaseAuth-->>AuthRepo: Session (JWT Access + Refresh)
+  SupabaseAuth->>Trigger: (solo primer login) ejecuta trigger handle_new_user
+  Trigger->>PublicUsers: Inserta/actualiza perfil (rol, ubicación)
+  SupabaseAuth-->>App: Session (JWT + Refresh Token)
+  AuthRepo->>AuthRepo: Cachea usuario en Isar
+  AuthRepo-->>App: Usuario autenticado
+  App->>AutoSync: updateUserRole(role, userId)
+  AutoSync->>AutoSync: Sincroniza módulos según rol
+  AutoSync->>SupabaseAuth: Utiliza JWT para llamadas REST (PostgREST, Storage)
+  loop Renovación automática
+    App->>SupabaseAuth: refreshSession(refresh_token)
+    SupabaseAuth-->>App: Nuevo JWT válido
+  end
+  App-->>User: Acceso concedido (Home)
+

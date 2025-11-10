@@ -1,0 +1,62 @@
+%% Flujo ABM de Usuarios (Administrador)
+%% Renderizar con mermaid-cli
+
+flowchart TD
+  classDef decision fill:#ffe0b2,stroke:#ef6c00,color:#3e2723,font-weight:bold
+  classDef proceso fill:#fff3e0,stroke:#6d4c41,color:#3e2723
+  classDef inicio fin fill:#c8e6c9,stroke:#2e7d32,color:#1b5e20,font-weight:bold
+  classDef datastore fill:#ede7f6,stroke:#5e35b1,color:#1a237e,font-weight:bold
+
+  Inicio([Inicio - Dashboard Admin]):::inicio
+  AbrirModulo["Abrir módulo Usuarios<br/>(UserManagementPage)"]:::proceso
+  DecisionAccion{¿Qué acción elegir?}:::decision
+
+  Inicio --> AbrirModulo --> DecisionAccion
+
+  DecisionAccion -->|Crear| FormCrear["Formulario «Nuevo Usuario»"]:::proceso
+  DecisionAccion -->|Editar| SeleccionarEditar[Selecciona usuario existente]:::proceso
+  DecisionAccion -->|Desactivar| SeleccionarDesactivar[Selecciona usuario → Confirmar]:::proceso
+
+  subgraph Creación
+    FormCrear --> ValidacionesCrear{¿Validación/Password OK?}:::decision
+    ValidacionesCrear -->|No| MostrarErrores1["Mostrar errores en UI (validators + PasswordStrengthIndicator)"]:::proceso
+    MostrarErrores1 --> FormCrear
+    ValidacionesCrear -->|Sí| EventoCreateBLoC[Dispara evento CreateUser]:::proceso
+    EventoCreateBLoC --> UseCaseCreate[UseCase CreateUser → RateLimiterService]:::proceso
+    UseCaseCreate --> RepoUsers[UserRepositoryImpl.createUser]
+    RepoUsers --> EdgeFunction["Supabase Edge Function create-user"]:::proceso
+    EdgeFunction --> AuthSupabase["Supabase Auth: crea usuario + trigger handle_new_user"]:::proceso
+    AuthSupabase --> TablaUsers["(Tabla public.users)"]:::datastore
+    AuthSupabase --> TablaCustomers["(Tabla public.customers)"]:::datastore
+    RepoUsers --> CacheIsar["(Isar users_local)"]:::datastore
+    TablaCustomers --> SyncService["AutoSyncService/FullSync → sincroniza dispositivos"]:::proceso
+    EventoCreateBLoC --> MostrarSnackbar1["Snackbar éxito + cierre diálogo"]:::proceso
+  end
+
+  subgraph Edición
+    SeleccionarEditar --> FormEditar[Formulario edición]:::proceso
+    FormEditar --> ValidacionesEditar{¿Datos válidos?}:::decision
+    ValidacionesEditar -->|No| MostrarErrores2["Mostrar errores"]:::proceso --> FormEditar
+    ValidacionesEditar -->|Sí| EventoUpdateBLoC["Evento UpdateUser"]:::proceso
+    EventoUpdateBLoC --> UseCaseUpdate["UseCase UpdateUser"]
+    UseCaseUpdate --> RepoUsersUpdate["UserRepositoryImpl.updateUser"]
+    RepoUsersUpdate --> SupabaseUsersUpdate["Supabase table public.users"]
+    RepoUsersUpdate --> CacheIsarUpdate["(Isar users_local)"]
+    EventoUpdateBLoC --> MostrarSnackbar2["Snackbar «Usuario actualizado»"]:::proceso
+  end
+
+  subgraph Desactivación
+    SeleccionarDesactivar --> EventoDeactivate["Evento DeactivateUser"]:::proceso
+    EventoDeactivate --> UseCaseDeactivate["UseCase deactivateUser"]
+    UseCaseDeactivate --> RepoUsersDeactivate["Repositorio → marca is_active=false"]
+    RepoUsersDeactivate --> SupabaseDeactivate["Update public.users.is_active"]
+    RepoUsersDeactivate --> CacheIsarDeactivate["(Isar users_local)"]
+    EventoDeactivate --> MostrarSnackbar3["Snackbar «Usuario desactivado»"]:::proceso
+  end
+
+  TablaUsers --> SyncService
+  SyncService --> CacheIsar[(Isar users_local)]
+
+  MostrarSnackbar1 --> Fin([Fin]):::fin
+  MostrarSnackbar2 --> Fin
+  MostrarSnackbar3 --> Fin

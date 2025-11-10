@@ -1,0 +1,25 @@
+11-10 01:29:14.156 21127 21127 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (1/5)
+11-10 01:37:42.378 21127 21127 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (2/5)
+11-10 01:40:04.985 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmial.com (1/5)
+11-10 01:40:23.277 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (1/5)
+11-10 01:40:47.459 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (2/5)
+11-10 01:43:34.762 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (3/5)
+11-10 01:44:45.873 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.om (1/5)
+11-10 01:48:20.018 26925 26925 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (4/5)
+11-10 01:50:48.376 27487 27487 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (5/5)
+11-10 01:50:48.439 27487 27487 I flutter : [38;5;208m│ ⚠️ ⛔ Rate Limiter: Usuario davicho981@gmail.com BLOQUEADO por 5 minutos (bloqueo #1)[0m
+11-10 01:54:47.871 27487 27487 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davidhugor11@gmail.com (1/5)
+11-10 01:56:31.835 27487 27487 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davidhugor11@gmail.com (2/5)
+11-10 01:57:04.936 27487 27487 I flutter : │ 🐛 ✅ Rate Limiter: Login exitoso para davidhugor11@gmail.com, registros limpiados
+11-10 01:57:29.364 27487 27487 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davidhugor11@gmail.com (1/5)
+11-10 02:31:23.646 30016 30016 I flutter : │ 🐛 🔓 Rate Limiter: Bloqueo expirado para davicho981@gmail.com
+11-10 02:31:27.988 30016 30016 I flutter : │ 🐛 ✅ Rate Limiter: Login exitoso para davicho981@gmail.com, registros limpiados
+11-10 02:42:48.933 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (1/5)
+11-10 02:43:24.985 30016 30016 I flutter : │ 🐛 ✅ Rate Limiter: Login exitoso para davicho981@gmail.com, registros limpiados
+11-10 02:45:31.629 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (1/5)
+11-10 02:45:50.137 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (2/5)
+11-10 02:46:04.648 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davidhugor11@gmail.com (1/5)
+11-10 02:47:33.990 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (3/5)
+11-10 02:49:52.894 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (4/5)
+11-10 02:50:11.238 30016 30016 I flutter : │ 🐛 🔒 Rate Limiter: Intento fallido registrado para davicho981@gmail.com (5/5)
+11-10 02:50:11.309 30016 30016 I flutter : [38;5;208m│ ⚠️ ⛔ Rate Limiter: Usuario davicho981@gmail.com BLOQUEADO por 5 minutos (bloqueo #1)[0m

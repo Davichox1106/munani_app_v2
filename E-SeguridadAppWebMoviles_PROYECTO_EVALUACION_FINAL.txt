@@ -1,0 +1,50 @@
+PROYECTO EVALUACIÓN FINAL
+MÓDULO: SEGURIDAD EN APLICACIONES WEB Y MÓVILES FULL STACK
+
+CONTENIDO
+
+1. Nombre y descripción del sistema web o aplicativo móvil full stack, objetivo, módulos y 
+funcionalidades. (aplicativo o sistema desarrollado donde fue aplicando las actividades 
+desde la unidad 1, opción aplicativo o sistema nuevo donde aplique lo requerido en el 
+tiempo disponible para la entrega)
+
+2. Descripción de la tecnología utilizada (lenguajes de desarrollo FS, bases de datos, etc)
+
+3. Checklist de seguridad
+
+3.1 Gestión de usuarios: A07: fallas de identificación incluye definición del User ID 
+formato, ABM (altas, bajas y modificaciones) de usuarios (implementado en unidad 1)
+
+3.2 Gestión de contraseñas: A07 fallas de autenticación incluye características y políticas 
+de contraseñas (complejidad, longitud, tiempo de vida útil, bloqueo por intentos fallidos) 
+uso de MFA (implementado en unidad 1)
+
+3.3 Gestión de roles: A01 pérdida de control de acceso y descripción de matriz de roles, 
+módulo de ABM de roles y accesos, granularidad de las funcionalidades para crear roles 
+nuevos, dar de baja roles sin uso, modificar roles existentes. (ya implementado en unidad 
+1)
+
+3.4 Criptografía: A02 Fallas criptográficas incluye uso de algoritmos fuertes, cifrado de 
+información o datos críticos, uso de TLS (implementado en unidad 1)
+
+3.5 Principios de diseño y desarrollo seguro, reglas de oro de OWASP (ya implementado 
+en unidad 2)
+
+3.6 Checklist de código seguro basado en Top Ten Owasp: seleccionar al menos 2 
+checklist de implementación entre: A03, A04, A05, A06, A08, A09, A10.
+
+ENTREGABLES
+
+1. Documento con los puntos requeridos 1 a 3, para el punto 3 incluir capturas de pantalla 
+de la funcionalidad del software y donde corresponda pantallas capturadas del código. 
+(LMS). Grabar documento como EF-NombreApellido.pdf
+
+2. Video con ejecución del software demostrando funcionalidad de los controles del 
+checklist de seguridad. (duración no mayor a 10 minutos), subir a la nube y compartir el 
+enlace, copiar enlace en el documento.
+
+3. Subir código en la nube, cliente, back, frond, etc. según corresponda a su software, 
+modelo relacional de las bases de datos (local y remoto), apk, web, subir todos los 
+recursos a la nube. Compartir ejecutable con enlaces para descarga y ejecución, usuario 
+y contraseña para probar, asegurar que no tenga restricciones, registrar esta información 
+en el documento.

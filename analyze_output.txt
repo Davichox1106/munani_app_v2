@@ -1,0 +1,50 @@
+Analyzing app_decoration_construction...                        
+
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:152:32 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:171:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:183:23 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:186:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:204:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:217:7 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps, guarded by an unrelated 'mounted' check - lib\features\inventory\presentation\pages\inventory_form_page.dart:226:7 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\locations\presentation\pages\store_form_page.dart:151:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\locations\presentation\pages\warehouse_form_page.dart:151:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\pages\purchase_detail_page.dart:282:43 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\pages\purchase_detail_page.dart:376:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\pages\purchase_form_page.dart:753:45 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:108:15 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:109:15 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:118:15 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:119:15 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:128:15 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:129:15 - deprecated_member_use
+   info - 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:137:15 - deprecated_member_use
+   info - 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre - lib\features\purchases\presentation\pages\purchases_list_page.dart:138:15 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\pages\purchases_list_page.dart:469:39 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\purchases\presentation\pages\quick_product_form_dialog.dart:202:19 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\purchases\presentation\pages\suppliers_list_page.dart:232:31 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\purchases\presentation\pages\suppliers_list_page.dart:273:17 - use_build_context_synchronously
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\widgets\purchase_card.dart:86:48 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\purchases\presentation\widgets\purchase_item_tile.dart:24:38 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\presentation\pages\daily_sales_report_page.dart:63:51 - deprecated_member_use
+   info - Unnecessary use of 'toList' in a spread - lib\features\reports\presentation\pages\daily_sales_report_page.dart:186:28 - unnecessary_to_list_in_spreads
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\presentation\pages\purchases_report_page.dart:148:55 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\reports\presentation\pages\purchases_report_page.dart:155:29 - deprecated_member_use
+   info - Unnecessary use of 'toList' in a spread - lib\features\reports\presentation\pages\purchases_report_page.dart:339:28 - unnecessary_to_list_in_spreads
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\presentation\pages\sales_report_page.dart:148:55 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\reports\presentation\pages\sales_report_page.dart:155:29 - deprecated_member_use
+   info - Unnecessary use of 'toList' in a spread - lib\features\reports\presentation\pages\sales_report_page.dart:357:28 - unnecessary_to_list_in_spreads
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\presentation\pages\transfers_report_page.dart:181:51 - deprecated_member_use
+   info - 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre - lib\features\reports\presentation\pages\transfers_report_page.dart:188:25 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\reports\presentation\pages\transfers_report_page.dart:372:40 - deprecated_member_use
+   info - Unnecessary use of 'toList' in a spread - lib\features\reports\presentation\pages\transfers_report_page.dart:416:28 - unnecessary_to_list_in_spreads
+   info - Empty catch block - lib\features\sales\data\repositories\sale_repository_impl.dart:172:19 - empty_catches
+   info - Empty catch block - lib\features\sales\data\repositories\sale_repository_impl.dart:194:19 - empty_catches
+   info - Empty catch block - lib\features\sales\data\repositories\sale_repository_impl.dart:243:19 - empty_catches
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\sync\presentation\pages\full_sync_page.dart:130:40 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\sync\presentation\pages\full_sync_page.dart:165:35 - deprecated_member_use
+   info - 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss - lib\features\sync\presentation\pages\full_sync_page.dart:166:33 - deprecated_member_use
+   info - Don't use 'BuildContext's across async gaps - lib\features\sync\presentation\pages\full_sync_page.dart:237:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\sync\presentation\pages\full_sync_page.dart:246:30 - use_build_context_synchronously
+   info - Don't use 'BuildContext's across async gaps - lib\features\sync\presentation\pages\full_sync_page.dart:259:28 - use_build_context_synchronously
+
