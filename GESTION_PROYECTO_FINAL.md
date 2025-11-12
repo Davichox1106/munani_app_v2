@@ -158,14 +158,14 @@ Mes 4 (Semanas 13-16): Reportes y Finalización
 
 | Sprint | Semanas | Inicio | Fin | Entregable Principal |
 |--------|---------|--------|-----|----------------------|
-| Sprint 1 | 1-2 | 2025-01-13 | 2025-01-26 | Sistema de autenticación + Core funcional |
-| Sprint 2 | 3-4 | 2025-01-27 | 2025-02-09 | CRUD Productos + Locations |
-| Sprint 3 | 5-6 | 2025-02-10 | 2025-02-23 | Inventario + Transferencias |
-| Sprint 4 | 7-8 | 2025-02-24 | 2025-03-09 | Compras + Proveedores |
-| Sprint 5 | 9-10 | 2025-03-10 | 2025-03-23 | Ventas + Clientes |
-| Sprint 6 | 11-12 | 2025-03-24 | 2025-04-06 | Carrito + Sistema de Pedidos |
-| Sprint 7 | 13-14 | 2025-04-07 | 2025-04-20 | Reportes + Optimización |
-| Sprint 8 | 15-16 | 2025-04-21 | 2025-05-04 | Testing + Deploy |
+| Sprint 1 | 1-2 | 2025-09-19 | 2025-10-02 | Sistema de autenticación + Core funcional |
+| Sprint 2 | 3-4 | 2025-10-03 | 2025-10-16 | CRUD Productos + Locations |
+| Sprint 3 | 5-6 | 2025-10-17 | 2025-10-30 | Inventario + Transferencias |
+| Sprint 4 | 7-8 | 2025-10-31 | 2025-11-13 | Compras + Proveedores |
+| Sprint 5 | 9-10 | 2025-11-14 | 2025-11-27 | Ventas + Clientes |
+| Sprint 6 | 11-12 | 2025-11-28 | 2025-12-11 | Carrito + Sistema de Pedidos |
+| Sprint 7 | 13-14 | 2025-12-12 | 2025-12-25 | Reportes + Optimización |
+| Sprint 8 | 15-16 | 2025-12-26 | 2026-01-08 | Testing + Deploy |
 
 #### 💰 Presupuesto del Proyecto
 
@@ -579,9 +579,9 @@ David - Project Manager
    └─ Progreso Sprint: ████████████████░░░░ 80% (40/50 SP)
 
 ⏱️ Cronograma:
-   ├─ Inicio: 2025-01-13
-   ├─ Hoy: 2025-03-15 (Semana 10 de 16)
-   └─ Fin Estimado: 2025-05-04
+   ├─ Inicio: 2025-09-19
+   ├─ Hoy: 2025-11-12 (Semana 8 de 16)
+   └─ Fin Estimado: 2026-01-08
 
 💰 Presupuesto:
    ├─ Total: $46,520
@@ -1382,7 +1382,7 @@ Si: ALCANCE = fijo, TIEMPO = variable
 
 | Versión | Fecha | Autor | Cambios |
 |---------|-------|-------|---------|
-| 1.0 | 2025-01-12 | David (PM) | Documento inicial completo |
+| 1.0 | 2025-11-12 | David (PM) | Documento inicial completo |
 
 ---
 
@@ -1398,7 +1398,7 @@ Si: ALCANCE = fijo, TIEMPO = variable
 ---
 
 **🎯 Documento preparado por:** Equipo Munani App V2
-**📅 Última actualización:** 2025-01-12
+**📅 Última actualización:** 2025-11-12
 **📧 Contacto:** [david@munaniapp.com](mailto:david@munaniapp.com)
 
 ---
