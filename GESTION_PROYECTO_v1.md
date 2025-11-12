@@ -26,7 +26,7 @@ Desarrollar una aplicación móvil empresarial de e-commerce para la comercializ
 - ✅ Aplicación móvil multiplataforma (Android/iOS)
 
 **Limites:**
-- ❌ Sistema de facturación electrónica (SUNAT)
+- ❌ Sistema de facturación electrónica (SIN - Bolivia)
 - ❌ Integración con pasarelas de pago automáticas
 - ❌ Sistema de delivery tracking en tiempo real
 - ❌ Aplicación web (solo móvil)
@@ -192,7 +192,7 @@ Si ALCANCE ↑ (se aumenta):
 | Cambio Solicitado | Evaluación | Impacto | Decisión |
 |-------------------|------------|---------|----------|
 | "Agregar notificaciones push" | +2 semanas | +$3,200 | ❌ Fuera de presupuesto |
-| "Integrar facturación SUNAT" | +4 semanas | +$6,400 | ❌ Cambio mayor, fase 2 |
+| "Integrar facturación SIN" | +4 semanas | +$6,400 | ❌ Cambio mayor, fase 2 |
 | "Mejorar UX de carrito" | +1 semana | +$1,600 | ✅ Dentro de contingencia |
 | "Agregar dashboard gráfico" | Ya incluido | $0 | ✅ En alcance original |
 
@@ -291,9 +291,9 @@ C) NEGOCIAR (pago por fases)
 
 ---
 
-#### Escenario 3: 📏 **Expansión de Alcance - "Agregar módulo de facturación SUNAT"**
+#### Escenario 3: 📏 **Expansión de Alcance - "Agregar módulo de facturación SIN"**
 
-**Situación:** Sponsor solicita agregar integración con SUNAT.
+**Situación:** Sponsor solicita agregar integración con SIN (Servicio de Impuestos Nacionales de Bolivia).
 
 **Análisis de Impacto:**
 ```
@@ -301,7 +301,7 @@ ALCANCE: 13 módulos → 14 módulos (+7.7%)
 
 Estimación del cambio:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-• Complejidad: Alta (API SUNAT compleja)
+• Complejidad: Alta (API SIN compleja)
 • Tiempo adicional: +3 semanas
 • Costo adicional: +$4,800 (3 semanas × 3 devs × 40h × $20/h)
 
@@ -311,12 +311,12 @@ Opciones:
 A) APROBAR CHANGE ORDER (aumentar tiempo y costo)
    ├─ Tiempo: 16 → 19 semanas (+18.7%)
    ├─ Costo: $46,520 → $51,320 (+10.3%)
-   └─ Alcance: +Facturación SUNAT
+   └─ Alcance: +Facturación SIN
    └─ Calidad: ✅ (sin compromiso)
 
 B) POSTERGAR A FASE 2 (recomendado)
    ├─ Entregar proyecto original en 16 semanas
-   ├─ Facturación SUNAT como proyecto separado
+   ├─ Facturación SIN como proyecto separado
    ├─ Presupuesto adicional: $8,000 - $12,000
    └─ Timeline: +1-2 meses post-lanzamiento
 
