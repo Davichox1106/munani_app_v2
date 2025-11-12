@@ -163,9 +163,7 @@ Mes 4 (Semanas 13-16): Reportes y Finalización
 | Sprint 3 | 5-6 | 2025-10-17 | 2025-10-30 | Inventario + Transferencias |
 | Sprint 4 | 7-8 | 2025-10-31 | 2025-11-13 | Compras + Proveedores |
 | Sprint 5 | 9-10 | 2025-11-14 | 2025-11-27 | Ventas + Clientes |
-| Sprint 6 | 11-12 | 2025-11-28 | 2025-12-11 | Carrito + Sistema de Pedidos |
-| Sprint 7 | 13-14 | 2025-12-12 | 2025-12-25 | Reportes + Optimización |
-| Sprint 8 | 15-16 | 2025-12-26 | 2026-01-08 | Testing + Deploy |
+| Sprint 6 | 11 | 2025-11-28 | 2025-12-07 | Carrito + Sistema de Pedidos + Testing + Deploy |
 
 #### 💰 Presupuesto del Proyecto
 
@@ -580,8 +578,8 @@ David - Project Manager
 
 ⏱️ Cronograma:
    ├─ Inicio: 2025-09-19
-   ├─ Hoy: 2025-11-12 (Semana 8 de 16)
-   └─ Fin Estimado: 2026-01-08
+   ├─ Hoy: 2025-11-12 (Semana 8 de 11)
+   └─ Fin Estimado: 2025-12-07
 
 💰 Presupuesto:
    ├─ Total: $46,520
