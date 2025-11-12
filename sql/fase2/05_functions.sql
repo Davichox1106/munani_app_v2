@@ -1,5 +1,5 @@
 -- ============================================================================
--- 01_5_functions.sql - FASE 2
+-- 05_functions.sql - FASE 2
 -- Funciones auxiliares para RLS
 -- ============================================================================
 -- IMPORTANTE: Ejecutar DESPUÉS de 01_extensions.sql y ANTES de 05_rls_policies.sql

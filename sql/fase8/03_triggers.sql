@@ -35,12 +35,5 @@ WHEN (OLD.status <> 'completed' AND NEW.status = 'completed')
 EXECUTE FUNCTION public.apply_sale_to_inventory();
 
 -- Auditoría (historial de ventas)
-DROP TRIGGER IF EXISTS trg_audit_sales ON public.sales;
-CREATE TRIGGER trg_audit_sales
-AFTER INSERT OR UPDATE OR DELETE ON public.sales
-FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
-
-DROP TRIGGER IF EXISTS trg_audit_sale_items ON public.sale_items;
-CREATE TRIGGER trg_audit_sale_items
-AFTER INSERT OR UPDATE OR DELETE ON public.sale_items
-FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+-- NOTA: Los triggers de auditoría se crean en FASE 11
+-- Ver: sql/fase11/01_sistema_de_auditoria.sql

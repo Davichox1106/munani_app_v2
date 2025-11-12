@@ -213,10 +213,64 @@ CREATE TRIGGER trg_audit_payment_receipts
     AFTER INSERT OR UPDATE OR DELETE ON public.payment_receipts
     FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
 
--- Trigger para transfers
+-- Trigger para transfers (Fase 5)
 DROP TRIGGER IF EXISTS trg_audit_transfers ON public.transfers;
 CREATE TRIGGER trg_audit_transfers
     AFTER INSERT OR UPDATE OR DELETE ON public.transfers
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para suppliers (Fase 6)
+DROP TRIGGER IF EXISTS trg_audit_suppliers ON public.suppliers;
+CREATE TRIGGER trg_audit_suppliers
+    AFTER INSERT OR UPDATE OR DELETE ON public.suppliers
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para purchases (Fase 6)
+DROP TRIGGER IF EXISTS trg_audit_purchases ON public.purchases;
+CREATE TRIGGER trg_audit_purchases
+    AFTER INSERT OR UPDATE OR DELETE ON public.purchases
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para purchase_items (Fase 6)
+DROP TRIGGER IF EXISTS trg_audit_purchase_items ON public.purchase_items;
+CREATE TRIGGER trg_audit_purchase_items
+    AFTER INSERT OR UPDATE OR DELETE ON public.purchase_items
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para administrators (Fase 7)
+DROP TRIGGER IF EXISTS trg_audit_administrators ON public.administrators;
+CREATE TRIGGER trg_audit_administrators
+    AFTER INSERT OR UPDATE OR DELETE ON public.administrators
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para employees_store (Fase 7)
+DROP TRIGGER IF EXISTS trg_audit_employees_store ON public.employees_store;
+CREATE TRIGGER trg_audit_employees_store
+    AFTER INSERT OR UPDATE OR DELETE ON public.employees_store
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para employees_warehouse (Fase 7)
+DROP TRIGGER IF EXISTS trg_audit_employees_warehouse ON public.employees_warehouse;
+CREATE TRIGGER trg_audit_employees_warehouse
+    AFTER INSERT OR UPDATE OR DELETE ON public.employees_warehouse
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para sales (Fase 8)
+DROP TRIGGER IF EXISTS trg_audit_sales ON public.sales;
+CREATE TRIGGER trg_audit_sales
+    AFTER INSERT OR UPDATE OR DELETE ON public.sales
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para sale_items (Fase 8)
+DROP TRIGGER IF EXISTS trg_audit_sale_items ON public.sale_items;
+CREATE TRIGGER trg_audit_sale_items
+    AFTER INSERT OR UPDATE OR DELETE ON public.sale_items
+    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+
+-- Trigger para customers (Fase 9)
+DROP TRIGGER IF EXISTS trg_audit_customers ON public.customers;
+CREATE TRIGGER trg_audit_customers
+    AFTER INSERT OR UPDATE OR DELETE ON public.customers
     FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
 
 -- ============================================================================
@@ -388,7 +442,19 @@ SELECT '📋 Características:'
 UNION ALL
 SELECT '   • Tabla audit_log con historial completo de cambios'
 UNION ALL
-SELECT '   • Triggers AFTER en todas las tablas (users, stores, warehouses, products, variants, inventory, transfers)'
+SELECT '   • Triggers AFTER en TODAS las tablas:'
+UNION ALL
+SELECT '     - Fase 1-5: users, stores, warehouses, products, product_variants, inventory, transfers'
+UNION ALL
+SELECT '     - Fase 6: suppliers, purchases, purchase_items'
+UNION ALL
+SELECT '     - Fase 7: administrators, employees_store, employees_warehouse'
+UNION ALL
+SELECT '     - Fase 8: sales, sale_items'
+UNION ALL
+SELECT '     - Fase 9: customers'
+UNION ALL
+SELECT '     - Fase 10: carts, cart_items, payment_receipts'
 UNION ALL
 SELECT '   • RLS habilitado en audit_log (seguridad por rol)'
 UNION ALL

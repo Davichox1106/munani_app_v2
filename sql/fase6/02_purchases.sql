@@ -294,15 +294,8 @@ CREATE TRIGGER trg_apply_purchase_to_inventory
     EXECUTE FUNCTION public.apply_purchase_to_inventory();
 
 -- Auditoría (historial de cambios)
-DROP TRIGGER IF EXISTS trg_audit_purchases ON public.purchases;
-CREATE TRIGGER trg_audit_purchases
-    AFTER INSERT OR UPDATE OR DELETE ON public.purchases
-    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
-
-DROP TRIGGER IF EXISTS trg_audit_purchase_items ON public.purchase_items;
-CREATE TRIGGER trg_audit_purchase_items
-    AFTER INSERT OR UPDATE OR DELETE ON public.purchase_items
-    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+-- NOTA: Los triggers de auditoría se crean en FASE 11
+-- Ver: sql/fase11/01_sistema_de_auditoria.sql
 
 -- ============================================================================
 -- ROW LEVEL SECURITY (RLS)

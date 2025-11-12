@@ -68,11 +68,8 @@ CREATE TRIGGER employees_warehouse_updated_at
 -- ============================================================================
 -- AUDITORÍA (LOG DE CAMBIOS)
 -- ============================================================================
-
-DROP TRIGGER IF EXISTS trg_audit_employees_warehouse ON public.employees_warehouse;
-CREATE TRIGGER trg_audit_employees_warehouse
-    AFTER INSERT OR UPDATE OR DELETE ON public.employees_warehouse
-    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+-- NOTA: Los triggers de auditoría se crean en FASE 11
+-- Ver: sql/fase11/01_sistema_de_auditoria.sql
 
 -- ============================================================================
 -- ROW LEVEL SECURITY (RLS)

@@ -22,7 +22,5 @@ CREATE INDEX IF NOT EXISTS idx_customers_ci ON public.customers(ci);
 CREATE INDEX IF NOT EXISTS idx_customers_name ON public.customers USING gin (to_tsvector('spanish', name));
 
 -- Auditoría (historial de clientes)
-DROP TRIGGER IF EXISTS trg_audit_customers ON public.customers;
-CREATE TRIGGER trg_audit_customers
-AFTER INSERT OR UPDATE OR DELETE ON public.customers
-FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+-- NOTA: Los triggers de auditoría se crean en FASE 11
+-- Ver: sql/fase11/01_sistema_de_auditoria.sql

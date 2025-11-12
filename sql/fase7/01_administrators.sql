@@ -61,11 +61,8 @@ CREATE TRIGGER administrators_updated_at
 -- ============================================================================
 -- AUDITORÍA (LOG DE CAMBIOS)
 -- ============================================================================
-
-DROP TRIGGER IF EXISTS trg_audit_administrators ON public.administrators;
-CREATE TRIGGER trg_audit_administrators
-    AFTER INSERT OR UPDATE OR DELETE ON public.administrators
-    FOR EACH ROW EXECUTE FUNCTION public.log_table_changes();
+-- NOTA: Los triggers de auditoría se crean en FASE 11
+-- Ver: sql/fase11/01_sistema_de_auditoria.sql
 
 -- ============================================================================
 -- ROW LEVEL SECURITY (RLS)
